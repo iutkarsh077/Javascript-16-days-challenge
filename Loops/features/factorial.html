@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Factorial</title>
+  </head>
+  <body>
+    <input type="text" value="" id="myinput">
+    <div id="container"></div>
+  </body>
+  <script>
+    let input = document.getElementById("myinput");
+
+    function createEl(inputvalue){
+        let i = 1;
+        let fact = 1;
+        do{
+            fact = fact * i;
+            i++;
+        }while(i <= inputvalue)
+
+        let myheading = document.createElement("h1");
+        myheading.innerText = fact;
+        document.getElementById("container").appendChild(myheading);
+    }
+
+    input.addEventListener("input", ()=>{
+        let inputvalue = input.value;
+        createEl(inputvalue);
+    })
+  </script>
+</html>

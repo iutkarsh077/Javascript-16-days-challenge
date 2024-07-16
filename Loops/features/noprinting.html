@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Print Numbers</title>
+  </head>
+  <body>
+    <input type="text" value="0" id="myinput" />
+    <div id="container"></div>
+  </body>
+  <script>
+    let input = document.getElementById("myinput");
+    function createEl(inputValue) {
+      for (let i = 1; i <= inputValue; i++) {
+        let mydiv = document.createElement("div");
+        mydiv.innerText = i;
+        document.getElementById("container").appendChild(mydiv);
+      }
+    }
+
+    input.addEventListener("input", function () {
+      let inputValue = input.value;
+      console.log(inputValue);
+      createEl(inputValue);
+    });
+  </script>
+</html>
