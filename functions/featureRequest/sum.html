@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="input1" value="0" />
+    <input type="text" id="input2" value="0" />
+    <button id="btn">Sum</button>
+    <div id="container"></div>
+  </body>
+  <script>
+    let input1 = document.getElementById("input1");
+    let input2 = document.getElementById("input2");
+    let val1 = 0;
+    let val2 = 0;
+    function getSum(num1, num2) {
+      let ans = num1 + num2;
+      console.log(ans);
+      return ans;
+    }
+    input1.addEventListener("input", () => {
+      val1 = Number(input1.value);
+    });
+
+    input2.addEventListener("input", () => {
+      val2 = Number(input2.value);
+    });
+
+    document.getElementById("btn").addEventListener("click", () => {
+      let ans = getSum(val1, val2);
+
+      let h3 = document.createElement("h3");
+      h3.innerText = ans;
+      document.getElementById("container").appendChild(h3);
+    });
+  </script>
+</html>

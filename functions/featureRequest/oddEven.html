@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" value=0 id="myinput" />
+    <div id="container"></div>
+  </body>
+  <script>
+    const input = document.getElementById("myinput");
+    const container = document.getElementById("container")
+    function getEvenOdd(val){
+        if(val % 2 == 0){
+            return "Even number"
+        }
+        else{
+            return "Odd number";
+        }
+    }
+    input.addEventListener("input", ()=>{
+        let val = input.value;
+        let ans = getEvenOdd(val);
+
+        const h3 = document.createElement('h3');
+        h3.innerHTML = ans;
+        container.appendChild(h3);
+    })
+  </script>
+</html>

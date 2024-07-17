@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" value=0 id="input" />
+    <button id="btn">Click me</button>
+    <div id="container"></div>
+  </body>
+  <script>
+    let input = document.getElementById("input");
+
+    function getPrint(val) {
+      for (let i = 0; i < val; i++) {
+        let h4 = document.createElement("h4");
+        h4.innerText = `Hii ${i}`;
+        document.getElementById("container").appendChild(h4);
+      }
+    }
+    input.addEventListener("input", () => {
+     let val = Number(input.value);
+    });
+
+    document.getElementById("btn").addEventListener("click", ()=>{
+        let val= Number(input.value);
+        getPrint(val)
+    })
+  </script>
+</html>

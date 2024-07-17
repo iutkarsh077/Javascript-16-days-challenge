@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="square" value="0" />
+    <div id="container"></div>
+  </body>
+  <script>
+    let input = document.getElementById("square");
+    function getSquare(val) {
+      return val * val;
+    }
+    input.addEventListener("input", () => {
+      let ans = getSquare(input.value);
+
+      let h3 = document.createElement("h3");
+      h3.innerText = ans;
+      document.getElementById("container").appendChild(h3);
+    });
+  </script>
+</html>
