@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Manipulation</title>
+  </head>
+  <body>
+    <input type="text" value="0" id="myinput" />
+    <button id="btn">Push</button>
+    <button id="pop">Pop</button>
+    <button id="shift">Shift</button>
+    <button id="unshift">Unshift</button>
+    <div id="container"></div>
+  </body>
+  <script>
+    let input = document.getElementById("myinput");
+    let btn = document.getElementById("btn");
+    let pop = document.getElementById("pop");
+    let shift = document.getElementById("shift");
+    let unshift = document.getElementById("unshift");
+
+    let arr = [];
+
+    btn.onclick = () => {
+      let val = input.value;
+      arr.push(val);
+      let div = document.createElement("div");
+      div.innerHTML = arr.join(", ");
+      document.getElementById("container").appendChild(div);
+    };
+
+    pop.onclick = () => {
+      arr.pop();
+      let div = document.createElement("div");
+      div.innerHTML = arr.join(", ");
+      document.getElementById("container").appendChild(div);
+    };
+
+    shift.onclick = () => {
+      arr.shift();
+      let div = document.createElement("div");
+      div.innerHTML = arr.join(", ");
+      document.getElementById("container").appendChild(div);
+    };
+
+    unshift.onclick = () => {
+      let val = input.value;
+      arr.unshift(val);
+      let div = document.createElement("div");
+      div.innerHTML = arr.join(", ");
+      document.getElementById("container").appendChild(div);
+    };
+  </script>
+</html>

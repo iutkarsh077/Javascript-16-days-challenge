@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=], initial-scale=1.0" />
+    <title>Using map, filter and Reduce</title>
+  </head>
+  <body>
+    <ul id="unorderlist">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+      <li>8</li>
+      <li>9</li>
+      <li>10</li>
+    </ul>
+    <button id="map">Map</button>
+    <button id="filter">Filter</button>
+    <button id="reduce">Reduce</button>
+    <div id="container"></div>
+  </body>
+  <script>
+    let allValues = document.querySelectorAll("#unorderlist li");
+    let map1 = document.getElementById("map");
+    let filter1 = document.getElementById("filter");
+    let red1 = document.getElementById("reduce");
+    let arr = [];
+    allValues.forEach((val) => {
+      val.addEventListener("click", (e) => {
+        const value = event.target.textContent;
+        console.log(value);
+        arr.push(value);
+      });
+    });
+
+    map1.addEventListener("click", () => {
+      let li1 = arr.map((val) => {
+        return val * val;
+      });
+
+      let div = document.createElement("div");
+      div.innerHTML = li1.join(", ");
+      document.getElementById("container").appendChild(div);
+    });
+
+    filter1.onclick = () => {
+      let li1 = arr.filter((val) => {
+        return val % 2 == 0;
+      });
+
+      let div = document.createElement("div");
+      div.innerHTML = li1.join(", ");
+      document.getElementById("container").appendChild(div);
+    };
+
+    red1.addEventListener("click", () => {
+      let li1 = arr.reduce((total, val) => {
+        return total * val;
+      });
+
+      let div = document.createElement("div");
+      div.innerHTML = li1;
+      document.getElementById("container").appendChild(div);
+    });
+  </script>
+</html>
