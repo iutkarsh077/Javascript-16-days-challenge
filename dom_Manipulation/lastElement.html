@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="container">
+      <li>First List 1</li>
+        <li>seond list 2</li>
+      <li>Third list 3</li>
+    </ul>
+  </body>
+  <script>
+    let lastElement = document.getElementById("container").lastElementChild;
+    lastElement.parentNode.removeChild(lastElement);
+    let firstElement = document.getElementById("container").firstElementChild;
+    firstElement.setAttribute("class", "secondClass");
+    console.log(firstElement);
+  </script>
+</html>

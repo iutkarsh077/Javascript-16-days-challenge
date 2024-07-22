@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn1">Add</button>
+    <button id="btn2">Remove</button>
+  </body>
+  <script>
+    let btn1 = document.getElementById("btn1");
+    let btn2 = document.getElementById("btn2");
+    btn1.toggleAttribute
+    btn1.addEventListener("click", ()=>{
+        btn1.style.backgroundColor = "green";
+        btn1.innerText = "text Changed"
+    })
+
+    btn2.addEventListener("click", ()=>{
+        btn2.style.backgroundColor = "red";
+    })
+
+    btn2.onmouseover = function(){
+        btn2.style.border = "6px solid purple"
+    }
+  </script>
+</html>

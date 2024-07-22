@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" value="" id="myinput1" />
+    <div id="container"></div>
+  </body>
+  <script>
+    let input1 = document.getElementById("myinput1");
+    input1.addEventListener("keydown", function(e){
+        let div = document.createElement("div");
+        div.innerText = `Key pressend is: ${e.key}, The code is ${e.code}`;
+        document.getElementById("container").appendChild(div);
+    })
+  </script>
+</html>

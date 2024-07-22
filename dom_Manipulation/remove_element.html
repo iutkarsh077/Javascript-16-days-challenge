@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn1">Remove button 1</button>
+    <button id="btn2">Remove button 2</button>
+    <button id="btn3">Remove button 3</button>
+    <button id="btn4">Remove button 4</button>
+  </body>
+  <script>
+    let btn1 = document.getElementById("btn1");
+    let btn2 = document.getElementById("btn2");
+    let btn3 = document.getElementById("btn3");
+    let btn4 = document.getElementById("btn4");
+
+    btn1.addEventListener("click", ()=>{
+        btn1.parentNode.removeChild(btn1);
+    })
+
+    btn2.addEventListener("click", ()=>{
+        btn2.parentNode.removeChild(btn2);
+    })
+
+    btn3.addEventListener("click", ()=>{
+        btn3.parentNode.removeChild(btn3);
+    })
+
+    btn4.addEventListener("click", ()=>{
+        btn4.parentNode.removeChild(btn4);
+    })
+  </script>
+</html>
